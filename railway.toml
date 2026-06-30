@@ -1,5 +1,4 @@
 [build]
-builder = "nixpacks"
 buildCommand = "bun install --frozen-lockfile && bun run build:packages && bun run build"
 
 [deploy]
