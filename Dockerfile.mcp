@@ -7,7 +7,6 @@ RUN bun install --frozen-lockfile
 
 COPY . .
 RUN bun run build:packages
-RUN bun run build
 
-EXPOSE 4173
-CMD ["bun", "x", "vite", "preview", "--host", "0.0.0.0", "--port", "4173"]
+EXPOSE 7600
+CMD ["node", "packages/mcp/dist/index.mjs"]
