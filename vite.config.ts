@@ -41,8 +41,6 @@ export default defineConfig(async ({ command }) => ({
   },
   server: createDevServerOptions(host),
   preview: {
-    allowedHosts: process.env.RAILWAY_PUBLIC_DOMAIN
-      ? [process.env.RAILWAY_PUBLIC_DOMAIN]
-      : undefined
+    allowedHosts: true
   }
 }))
