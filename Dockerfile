@@ -1,11 +1,8 @@
 FROM oven/bun:1-slim AS base
 WORKDIR /app
 
-COPY package.json bun.lock ./
-COPY packages/*/package.json ./packages/
-RUN bun install --frozen-lockfile
-
 COPY . .
+RUN bun install --frozen-lockfile
 RUN bun run build:packages
 RUN bun run build
 
