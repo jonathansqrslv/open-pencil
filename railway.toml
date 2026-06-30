@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "bun install --frozen-lockfile && bun run build:packages"
+
+[deploy]
+startCommand = "bun run preview"
+healthcheckPath = "/"
+healthcheckTimeout = 300
